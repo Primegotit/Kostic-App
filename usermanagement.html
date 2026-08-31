@@ -28,22 +28,60 @@
     
 
    <main class="grid sm:grid-cols-1 sm:grid-rows-2 md:grid-cols-6 md:grid-rows-1  h-[calc(100vh-4rem)] ">
+<!-- shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)] -->
+        <div class="md:col-span-4 sm:row-span-1 text-sm  overflow-auto  rounded-tr-3xl  rounded-br-3xl shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)] bg-gray-200 ">
+            
+            <div class="flex flex-row gap-3 mt-2 items-center justify-center p-3 bg-[#0a7102] mb-3 text-white rounded-lg">
+                <img src="images/logo15.png" alt="" class="h-7 ">
+                <h3 class="font-bold">Employee table</h3>
+            </div>
 
-        <div class="md:col-span-4 sm:row-span-1 p-3 overflow-auto shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)] rounded-3xl bg-gray-200">
-            <table class="w-full  p-3 border border-[#f77f00] text-xs shadow-lg rounded-xl ">
-                <thead class=" bg-[#252525] text-white">
-                    <tr class="border border-[#6a6a6a] ">
-                        <th class="border border-[#6a6a6a] p-1 ">ID</th>
-                        <th class="border border-[#6a6a6a] p-1 ">First Name</th>
-                        <th class="border border-[#6a6a6a] p-1 ">Last Name</th>
-                        <th class="border border-[#6a6a6a] p-1 ">Gender</th>
-                        <th class="border border-[#6a6a6a] p-1 ">DOB</th>
-                        <th class="border border-[#6a6a6a] p-1 ">Address</th>
-                        <th class="border border-[#6a6a6a] p-1 ">Email</th>
-                        <th class="border border-[#6a6a6a] p-1 ">Phone Number</th>
-                        <th class="border border-[#6a6a6a] p-1 ">Role</th>
-                        <th class="border border-[#6a6a6a] p-1 ">Username</th>
-                        <th class="border border-[#6a6a6a] p-1 ">Password</th>
+            <div class="flex flex-row justify-start gap-6 p-4">
+                <div>
+                    <label for="">Search for</label>
+                    <input type="text" name="" id="" class="p-1 border border-orange-300 rounded-lg">
+                </div>
+
+
+                <div>
+                    <label for="">Search by</label>
+                    <select name="" id="" class="p-1 border border-orange-300 rounded-lg">
+                        <option value="">Select...</option>
+                        <option value="">ID</option>
+                        <option value="">First Name</option>
+                        <option value="">Last Name</option>
+                        <option value="">Gender</option>
+                        <option value="">DOB</option>
+                        <option value="">Address</option>
+                        <option value="">Email</option>
+                        <option value="">Phone Number</option>
+                        <option value="">Role</option>
+                        <option value="">Username</option>
+                        <option value="">Password</option>
+                    </select>
+                </div>
+
+                <div class="flex flex-row gap-3">
+                    <a href="#" class="bg-[#f77f00] text-white w-24 rounded-lg shadow-md cursor-pointer flex flex-row justify-center items-center transition duration-300 hover:scale-105">Search</a>
+                    <a href="#" class="bg-[#f77f00] text-white w-24 rounded-lg shadow-md cursor-pointer flex flex-row justify-center items-center transition duration-300 hover:scale-105">Reset</a>
+                </div>
+                
+            </div>
+
+            <table class="w-full  p-3 border border-[#f77f00] text-xs shadow-lg  rounded-3xl ">
+                <thead class=" bg-[#0a7102] text-white ">
+                    <tr class="border border-[#a8a8a8] ">
+                        <th class="border border-[#a8a8a8] p-1  ">ID</th>
+                        <th class="border border-[#a8a8a8] p-1 ">First Name</th>
+                        <th class="border border-[#a8a8a8] p-1 ">Last Name</th>
+                        <th class="border border-[#a8a8a8] p-1 ">Gender</th>
+                        <th class="border border-[#a8a8a8] p-1 ">DOB</th>
+                        <th class="border border-[#a8a8a8] p-1 ">Address</th>
+                        <th class="border border-[#a8a8a8] p-1 ">Email</th>
+                        <th class="border border-[#a8a8a8] p-1 ">Phone Number</th>
+                        <th class="border border-[#a8a8a8] p-1 ">Role</th>
+                        <th class="border border-[#a8a8a8] p-1 ">Username</th>
+                        <th class="border border-[#a8a8a8] p-1 ">Password</th>
 
 
 
@@ -51,34 +89,34 @@
                 </thead>
 
                 <tbody class="bg-gray-100">
-                    <tr class="border border-[#6a6a6a] ">
-                        <td class="border border-[#6a6a6a] p-1">N0234324</td>
-                        <td class="border border-[#6a6a6a] p-1">Promise</td>
-                        <td class="border border-[#6a6a6a] p-1">Agbonlahor</td>
-                        <td class="border border-[#6a6a6a] p-1">Male</td>
-                        <td class="border border-[#6a6a6a] p-1">07-11-2003</td>
-                        <td class="border border-[#6a6a6a] p-1">49 Agbonlahor lane, Oredo, Benin City</td>
-                        <td class="border border-[#6a6a6a] p-1">[EMAIL_ADDRESS]</td>
-                        <td class="border border-[#6a6a6a] p-1">08031234567</td>
-                        <td class="border border-[#6a6a6a] p-1">Student</td>
-                        <td class="border border-[#6a6a6a] p-1">Promise123</td>
-                        <td class="border border-[#6a6a6a] p-1">Promise123</td>
+                    <tr class="border border-[#a8a8a8] ">
+                        <td class="border border-[#a8a8a8] p-1">N0234324</td>
+                        <td class="border border-[#a8a8a8] p-1">Promise</td>
+                        <td class="border border-[#a8a8a8] p-1">Agbonlahor</td>
+                        <td class="border border-[#a8a8a8] p-1">Male</td>
+                        <td class="border border-[#a8a8a8] p-1">07-11-2003</td>
+                        <td class="border border-[#a8a8a8] p-1">49 Agbonlahor lane, Oredo, Benin City</td>
+                        <td class="border border-[#a8a8a8] p-1">[EMAIL_ADDRESS]</td>
+                        <td class="border border-[#a8a8a8] p-1">08031234567</td>
+                        <td class="border border-[#a8a8a8] p-1">Student</td>
+                        <td class="border border-[#a8a8a8] p-1">Promise123</td>
+                        <td class="border border-[#a8a8a8] p-1">Promise123</td>
 
 
                     </tr>
 
-                    <tr class="border border-[#6a6a6a] ">
-                        <td class="border border-[#6a6a6a] p-1">N0234324</td>
-                        <td class="border border-[#6a6a6a] p-1">Promise</td>
-                        <td class="border border-[#6a6a6a] p-1">Agbonlahor</td>
-                        <td class="border border-[#6a6a6a] p-1">Male</td>
-                        <td class="border border-[#6a6a6a] p-1">07-11-2003</td>
-                        <td class="border border-[#6a6a6a] p-1">49 Agbonlahor lane, Oredo, Benin City</td>
-                        <td class="border border-[#6a6a6a] p-1">[EMAIL_ADDRESS]</td>
-                        <td class="border border-[#6a6a6a] p-1">08031234567</td>
-                        <td class="border border-[#6a6a6a] p-1">Student</td>
-                        <td class="border border-[#6a6a6a] p-1">Promise123</td>
-                        <td class="border border-[#6a6a6a] p-1">Promise123</td>
+                    <tr class="border border-[#a8a8a8] ">
+                        <td class="border border-[#a8a8a8] p-1">N0234324</td>
+                        <td class="border border-[#a8a8a8] p-1">Promise</td>
+                        <td class="border border-[#a8a8a8] p-1">Agbonlahor</td>
+                        <td class="border border-[#a8a8a8] p-1">Male</td>
+                        <td class="border border-[#a8a8a8] p-1">07-11-2003</td>
+                        <td class="border border-[#a8a8a8] p-1">49 Agbonlahor lane, Oredo, Benin City</td>
+                        <td class="border border-[#a8a8a8] p-1">[EMAIL_ADDRESS]</td>
+                        <td class="border border-[#a8a8a8] p-1">08031234567</td>
+                        <td class="border border-[#a8a8a8] p-1">Student</td>
+                        <td class="border border-[#a8a8a8] p-1">Promise123</td>
+                        <td class="border border-[#a8a8a8] p-1">Promise123</td>
 
 
                     </tr>
@@ -162,6 +200,15 @@
                 <div class="flex flex-col ">
                     <label for="">Confirm Password</label>
                     <input type="text" name="" id="" class="p-1 border border-orange-300 rounded-lg">
+                </div>
+
+
+                <div class="flex flex-row gap-3">
+                    <a href="#" class="bg-[#f77f00] text-white w-24 h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center items-center transition duration-300 hover:scale-105">Insert</a>
+                    <a href="#" class="bg-[#f77f00] text-white w-24 h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center items-center transition duration-300 hover:scale-105">Update</a>
+                    <a href="#" class="bg-[#f77f00] text-white w-24 h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center items-center transition duration-300 hover:scale-105">Delete</a>
+                    <a href="#" class="bg-[#f77f00] text-white w-24 h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center items-center transition duration-300 hover:scale-105">Reset</a>
+
                 </div>
                 
             </form>
