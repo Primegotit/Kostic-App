@@ -31,14 +31,17 @@
 <!-- shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)] -->
         <div class="md:col-span-4 row-span-3 text-sm overflow-auto rounded-tr-3xl  rounded-br-3xl shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)] bg-gray-200 p-3 ">
             
-            <div class="flex flex-row gap-3 mt-2 items-center justify-between p-3 bg-[#f77f00] mb-3 text-white rounded-lg shadow-lg">
-                <div class="flex flex-row gap-2 items-center justify-start">
+            <div class="sm:flex  sm:flex-col md:flex-row lg:flex-row xl:flex-row gap-3 mt-2 items-center justify-between p-3 bg-[#f77f00] mb-3 text-white rounded-lg shadow-lg">
+                <div class="flex flex-row gap-2 items-center justify-start py-2 ">
                     <img src="images/logo15.png" alt="" class="h-6 ">
                     <h3 class="font-bold md:text-md sm:text-md lg:lg xl:text-lg text-md">Product table</h3>
                 </div>
 
-                <div>
-                    <a href="#" class="bg-[#2e2e2e] text-white px-3  h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105  text-xs sm:text-sm md:text-md lg:text-md xl:text-md">Audit logging system <i class="fa-solid fa-clock-rotate-left text-md text-white  "></i></a>
+                <div class="flex flex-row gap-3 items-center justify-start sm:mt-2 ">
+                    <a href="#" class="bg-[#2e2e2e] text-white px-3  h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105  text-xs sm:text-sm md:text-md lg:text-md xl:text-md">Low stock alerts<i class="fa-solid fa-clock-rotate-left text-md text-white  "></i></a>
+                    <a href="#" class="bg-[#2e2e2e] text-white px-3  h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105  text-xs sm:text-sm md:text-md lg:text-md xl:text-md">Stock Analysis<i class="fa-solid fa-clock-rotate-left text-md text-white  "></i></a>
+
+                    <a href="#" class="bg-[#2e2e2e] text-white px-3  h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105  text-xs sm:text-sm md:text-md lg:text-md xl:text-md">Inventory tracking<i class="fa-solid fa-clock-rotate-left text-md text-white  "></i></a>
 
                 </div>
                 
@@ -89,6 +92,7 @@
                     <div class="flex flex-row gap-3   items-end justify-center">
                         <a href="#" class="bg-[#f77f00] text-white px-3  h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-md lg:text-md xl:text-md">Search <i class="fa-solid fa-magnifying-glass text-md text-white  "></i></a>
                         <a href="#" class="bg-[#f77f00] text-white px-3 h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-md lg:text-md xl:text-md" >Reset <i class="fa-solid fa-rotate-left text-md text-white  "></i></a>
+                        
                     </div>
                     
                 </div>
@@ -106,7 +110,7 @@
                     <!-- <div class="h-[2px] w-[30px] bg-[#f77f00]"></div> -->
                     
                     <div class="flex flex-row gap-1 justify-center items-center">
-                        <h3 class="font-bold">Employees table</h3>
+                        <h3 class="font-bold">Products table</h3>
                         <i class="fa-solid fa-table-list text-xl text-gray-900 "></i>
                     </div>
 
@@ -215,14 +219,21 @@
         <div class=" md:col-span-2 row-span-1  p-4 text-sm overflow-auto">
             <div class="flex flex-row gap-3 items-center justify-center p-3 bg-[#f77f00] mb-3 text-white rounded-lg shadow-lg">
                 <img src="images/logo15.png" alt="" class="h-7 ">
-                <h3 class="font-bold">Employee details</h3>
+                <h3 class="font-bold">Product details</h3>
             </div>
 
             <form action="" class="flex flex-col gap-4  p-4 border border-orange-400 rounded-lg shadow-lg " >
                 <div class="flex flex-col  items-center gap-3">
                     <!-- <img src="images/logo1.png" alt="" class="h-40 "> -->
-                     <i class="fa-solid fa-user text-9xl text-gray-600 border border-gray-300 p-5 rounded-lg shadow-md"></i>
-                    <input type="file" name="" id="" class=" flex justify-center items-center self-center w-7/12 ">
+                    <i class="fa-solid fa-user text-9xl text-gray-600 border border-gray-300 p-5 rounded-lg shadow-md"><img src="" alt=""></i>
+                    <div class="flex flex-row gap-3">
+
+                        <a href="#" class="bg-[#2e2e2e] text-white px-3  h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105  text-xs sm:text-sm md:text-md lg:text-md xl:text-md">AI image<i class="fa-solid fa-clock-rotate-left text-md text-white  "></i></a>
+                        <a href="#" class="bg-[#2e2e2e] text-white px-3  h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105  text-xs sm:text-sm md:text-md lg:text-md xl:text-md">Browse <i class="fa-solid fa-folder text-md text-white  "></i></a>
+
+
+                    </div>
+
                 </div>
                 <div class="flex flex-col ">
                     <label for="">ID</label>
