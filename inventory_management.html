@@ -48,56 +48,75 @@
             </div>
 
 
-            <div class=" px-3 py-3 border border-[#f77f00] rounded-lg shadow-md">
+            <div class=" px-3 py-3 border border-[#f77f00] rounded-lg shadow-md flex flex-row gap-1 flex-wrap justify-between  ">
 
-            
-                <div class=" flex flex-row items-center justify-start w-full gap-1 ">
+                <div class=" ">
+                    <div class=" flex flex-row items-center justify-start w-full gap-1 ">
 
+                        <h3 class="font-bold ">Search criteria</h3>
+                        <i class="fa-solid fa-magnifying-glass-plus text-xl text-gray-900 "></i>
 
-                    <h3 class="font-bold ">Search criteria</h3>
-                    
-                    <i class="fa-solid fa-magnifying-glass-plus text-xl text-gray-900 "></i>
-
-                </div>
-
-                <div class="bg-[#f77f00] w-full h-[1px] mt-1"></div>
-
-                <div class="flex flex-row justify-start gap-6 mt-2 py-1  flex-wrap border  mb-3">
-                    <div class="flex flex-row justify-start gap-6 ">
-                        <div>
-                            <label for="">Search for</label>
-                            <input type="text" name="" id="" class="p-1 border border-orange-400 bg-gray-100 rounded-lg w-5/6">
-                        </div>
-
-
-                        <div>
-                            <label for="">Search by</label>
-                            <select name="" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100 w-[99%]">
-                                <option value="">Select...</option>
-                                <option value="">ID</option>
-                                <option value="">First Name</option>
-                                <option value="">Last Name</option>
-                                <option value="">Gender</option>
-                                <option value="">DOB</option>
-                                <option value="">Address</option>
-                                <option value="">Email</option>
-                                <option value="">Phone Number</option>
-                                <option value="">Role</option>
-                                <option value="">Username</option>
-                                <option value="">Password</option>
-                            </select>
-                        </div>
                     </div>
-                    
-                    <div class="flex flex-row gap-3   items-end justify-center">
-                        <a href="#" class="bg-[#f77f00] text-white px-3  h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-md lg:text-md xl:text-md">Search <i class="fa-solid fa-magnifying-glass text-md text-white  "></i></a>
-                        <a href="#" class="bg-[#f77f00] text-white px-3 h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-md lg:text-md xl:text-md" >Reset <i class="fa-solid fa-rotate-left text-md text-white  "></i></a>
+
+                    <div class="bg-[#f77f00] w-full h-[1px] mt-1"></div>
+
+                    <div class="flex flex-row justify-start gap-6 mt-2 py-1  flex-wrap border  mb-1">
+
+                        <div class="flex flex-row justify-start gap-6 ">
+                            <div>
+                                <label for="">Search for</label>
+                                <input type="text" name="" id="" class="p-1 border border-orange-400 bg-gray-100 rounded-lg w-5/6">
+                            </div>
+
+
+                            <div>
+                                <label for="">Search by</label>
+                                <select name="" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100 w-[99%]">
+                                    <option value="">Select...</option>
+                                    <option value="">Product ID</option>
+                                    <option value="">Product Name</option>
+                                    <option value="">Category</option>
+                                    <option value="">Price</option>
+                                    <option value="">Stock Quantity</option>
+                                    <option value="">Supplier</option>
+                                    <option value="">Status</option>
+                                    <option value="">Search tags</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-row gap-3 items-end justify-center ">
+                            <a href="#" class="bg-[#f77f00] text-white px-3  h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-md lg:text-md xl:text-md">Search <i class="fa-solid fa-magnifying-glass text-md text-white  "></i></a>
+                            <a href="#" class="bg-[#f77f00] text-white px-3 h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-md lg:text-md xl:text-md" >Reset <i class="fa-solid fa-rotate-left text-md text-white  "></i></a>
+                            
+                        </div>
                         
                     </div>
-                    
                 </div>
-                
 
+                <div class="flex flex-col">
+
+                    <div class=" flex flex-row items-center justify-start w-full gap-1 ">
+
+                        <h3 class="font-bold ">Stock Operations</h3>
+                        <i class="fa-solid fa-gear text-xl text-gray-900 "></i>
+
+                    </div>
+
+                    <div class="bg-[#f77f00] w-full h-[1px] mt-1"></div>
+                    
+                    <div class="mt-2">
+                        <label for="">Click the buttons below to view the stock quantities by category</label>
+                    </div>
+
+                    <div class="flex flex-row gap-4 ">
+                        <a href="#" class="bg-[#0080f7] text-white px-3 w-[55%] h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-md lg:text-md xl:text-md">Product categories <i class="fa-solid fa-magnifying-glass text-md text-white  "></i></a>
+                        <a href="#" class="bg-[#0080f7] text-white px-3 w-[55%]  h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-md lg:text-md xl:text-md">Stock quantities <i class="fa-solid fa-magnifying-glass text-md text-white  "></i></a>
+  
+                    </div>   
+
+                </div>
+            
 
             </div>
 
@@ -127,18 +146,19 @@
                     <table class="w-full p-3 border border-[#f77f00] text-xs  rounded-lg  overflow-hidden table-fixed ">
                         <thead class=" bg-[#f77f00] text-white ">
                             <tr class="border   ">
-                                <th class=" w-24 p-1  ">ID</th>
-                                <th class=" w-24 p-1 ">First Name</th>
-                                <th class=" w-24 p-1 ">Last Name</th>
-                                <th class=" w-24 p-1 ">Gender</th>
-                                <th class=" w-24 p-1 ">DOB</th>
-                                <th class=" w-40 p-1 ">Address</th>
-                                <th class=" w-32 p-1 ">Email</th>
-                                <th class=" w-24 p-1 ">Phone Number</th>
-                                <th class=" w-24 p-1 ">Role</th>
-                                <th class=" w-24 p-1 ">Username</th>
-                                <th class=" w-24 p-1 ">Password</th>
-                                <th class=" w-24 p-1 "></th>
+                                <th class=" w-24 p-1 text-left ">ProductID</th>
+                                <th class=" w-24 p-1 text-left ">Product Name</th>
+                                <th class=" w-24 p-1 text-left ">Category</th>
+                                <th class=" w-24 p-1 text-left ">Price</th>
+                                <th class=" w-24 p-1 text-left ">Stock Quantity</th>
+                                <th class=" w-40 p-1 text-left ">Supplier</th>
+                                <th class=" w-32 p-1 text-left ">Expiration Date</th>
+                                <th class=" w-24 p-1 text-left ">Date Added</th>
+                                <th class=" w-24 p-1 text-left ">Search tags</th>
+                                <th class=" w-24 p-1 text-left ">Status</th>
+                                <th class=" w-24 p-1 text-left ">Actions</th>
+
+                                <!-- <th class=" w-24 p-1 ">Password</th> -->
 
 
 
@@ -147,17 +167,17 @@
 
                         <tbody class="bg-gray-100">
                             <tr class="border border-[#d0d0d0] transition duration-300 hover:bg-orange-200 ">
-                                <td class="border border-[#d0d0d0] p-1">N0234324</td>
-                                <td class="border border-[#d0d0d0] p-1">Promise</td>
-                                <td class="border border-[#d0d0d0] p-1">Agbonlahor</td>
-                                <td class="border border-[#d0d0d0] p-1">Male</td>
-                                <td class="border border-[#d0d0d0] p-1">07-11-2003</td>
-                                <td class="border border-[#d0d0d0] p-1">49 Agbonlahor lane, Oredo, Benin City</td>
-                                <td class="border border-[#d0d0d0] p-1">[EMAIL_ADDRESS]</td>
-                                <td class="border border-[#d0d0d0] p-1">08031234567</td>
-                                <td class="border border-[#d0d0d0] p-1">Student</td>
-                                <td class="border border-[#d0d0d0] p-1">Promise123</td>
-                                <td class="border border-[#d0d0d0] p-1">Promise123</td>
+                                <td class="border border-[#d0d0d0] p-1">P001</td>
+                                <td class="border border-[#d0d0d0] p-1">Bakers Inn</td>
+                                <td class="border border-[#d0d0d0] p-1">White Bread</td>
+                                <td class="border border-[#d0d0d0] p-1">$1.00</td>
+                                <td class="border border-[#d0d0d0] p-1">1000</td>
+                                <td class="border border-[#d0d0d0] p-1">Bakers Inn</td>
+                                <td class="border border-[#d0d0d0] p-1">12/01/2026</td>
+                                <td class="border border-[#d0d0d0] p-1">12/01/2026</td>
+                                <td class="border border-[#d0d0d0] p-1">#bread #bakersinn #whitebread</td>
+                                <td class="border border-[#d0d0d0] p-1">Available</td>
+
                                 <td class="border border-[#d0d0d0] p-1"><a href="#" class="bg-[#f73100] text-white w-20 h-7 rounded-lg shadow-md cursor-pointer flex flex-row justify-center items-center transition duration-300 hover:scale-105">Edit</a></td>
                         
 
@@ -165,49 +185,60 @@
                             </tr>
 
                             <tr class="border border-[#d0d0d0] transition duration-300 hover:bg-orange-200">
-                                <td class="border border-[#d0d0d0] p-1">N0234324</td>
-                                <td class="border border-[#d0d0d0] p-1">Promise</td>
-                                <td class="border border-[#d0d0d0] p-1">Agbonlahor</td>
-                                <td class="border border-[#d0d0d0] p-1">Male</td>
-                                <td class="border border-[#d0d0d0] p-1">07-11-2003</td>
-                                <td class="border border-[#d0d0d0] p-1">49 Agbonlahor lane, Oredo, Benin City</td>
-                                <td class="border border-[#d0d0d0] p-1">[EMAIL_ADDRESS]</td>
-                                <td class="border border-[#d0d0d0] p-1">08031234567</td>
-                                <td class="border border-[#d0d0d0] p-1">Student</td>
-                                <td class="border border-[#d0d0d0] p-1">Promise123</td>
-                                <td class="border border-[#d0d0d0] p-1">Promise123</td>
+                                <td class="border border-[#d0d0d0] p-1">P002</td>
+                                <td class="border border-[#d0d0d0] p-1">Proton Cookies 1Kg</td>
+                                <td class="border border-[#d0d0d0] p-1">Cookies</td>
+                                <td class="border border-[#d0d0d0] p-1">$1.40</td>
+                                <td class="border border-[#d0d0d0] p-1">200</td>
+                                <td class="border border-[#d0d0d0] p-1">Proton Bakeries</td>
+                                <td class="border border-[#d0d0d0] p-1">12/12/2025</td>
+                                <td class="border border-[#d0d0d0] p-1">12/01/2026</td>
+                                <td class="border border-[#d0d0d0] p-1">#cookies #protonbakery #1kg</td>
+                                <td class="border border-[#d0d0d0] p-1">Available</td>
                                 <td class="border border-[#d0d0d0] p-1"><a href="#" class="bg-[#f73100] text-white w-20 h-7 rounded-lg shadow-md cursor-pointer flex flex-row justify-center items-center transition duration-300 hover:scale-105">Edit</a></td>
                             </tr>
 
                             <tr class="border border-[#d0d0d0] transition duration-300 hover:bg-orange-200">
-                                <td class="border border-[#d0d0d0] p-1">N0234324</td>
-                                <td class="border border-[#d0d0d0] p-1">Promise</td>
-                                <td class="border border-[#d0d0d0] p-1">Agbonlahor</td>
-                                <td class="border border-[#d0d0d0] p-1">Male</td>
-                                <td class="border border-[#d0d0d0] p-1">07-11-2003</td>
-                                <td class="border border-[#d0d0d0] p-1">49 Agbonlahor lane, Oredo, Benin City</td>
-                                <td class="border border-[#d0d0d0] p-1">[EMAIL_ADDRESS]</td>
-                                <td class="border border-[#d0d0d0] p-1">08031234567</td>
-                                <td class="border border-[#d0d0d0] p-1">Student</td>
-                                <td class="border border-[#d0d0d0] p-1">Promise123</td>
-                                <td class="border border-[#d0d0d0] p-1">Promise123</td>
+                                <td class="border border-[#d0d0d0] p-1">P003</td>
+                                <td class="border border-[#d0d0d0] p-1">Buns</td>
+                                <td class="border border-[#d0d0d0] p-1">Buns</td>
+                                <td class="border border-[#d0d0d0] p-1">$0.30</td>
+                                <td class="border border-[#d0d0d0] p-1">200</td>
+                                <td class="border border-[#d0d0d0] p-1">Proton Bakeries</td>
+                                <td class="border border-[#d0d0d0] p-1">12/01/2026</td>
+                                <td class="border border-[#d0d0d0] p-1">12/01/2026</td>
+                                <td class="border border-[#d0d0d0] p-1">#buns #protonbakery #1kg</td>
+                                <td class="border border-[#d0d0d0] p-1">Available</td>
+                                <td class="border border-[#d0d0d0] p-1"><a href="#" class="bg-[#f73100] text-white w-20 h-7 rounded-lg shadow-md cursor-pointer flex flex-row justify-center items-center transition duration-300 hover:scale-105">Edit</a></td>
+                            </tr>
+
+                            <tr class="border border-[#d0d0d0] transition duration-300 hover:bg-orange-200">
+                                <td class="border border-[#d0d0d0] p-1">P004</td>
+                                <td class="border border-[#d0d0d0] p-1">Cake</td>
+                                <td class="border border-[#d0d0d0] p-1">Cake</td>
+                                <td class="border border-[#d0d0d0] p-1">$0.60</td>
+                                <td class="border border-[#d0d0d0] p-1">500</td>
+                                <td class="border border-[#d0d0d0] p-1">Proton Bakeries</td>
+                                <td class="border border-[#d0d0d0] p-1">12/01/2026</td>
+                                <td class="border border-[#d0d0d0] p-1">12/01/2026</td>
+                                <td class="border border-[#d0d0d0] p-1">#cake #protonbakery #1kg</td>
+                                <td class="border border-[#d0d0d0] p-1">Available</td>
                                 <td class="border border-[#d0d0d0] p-1"><a href="#" class="bg-[#f73100] text-white w-20 h-7 rounded-lg shadow-md cursor-pointer flex flex-row justify-center items-center transition duration-300 hover:scale-105">Edit</a></td>
                             </tr>
 
 
 
                             <tr class="border border-[#d0d0d0] transition duration-300 hover:bg-orange-200">
-                                <td class="border border-[#d0d0d0] p-1">N0234324</td>
-                                <td class="border border-[#d0d0d0] p-1">Promise</td>
-                                <td class="border border-[#d0d0d0] p-1">Agbonlahor</td>
-                                <td class="border border-[#d0d0d0] p-1">Male</td>
-                                <td class="border border-[#d0d0d0] p-1">07-11-2003</td>
-                                <td class="border border-[#d0d0d0] p-1">49 Agbonlahor lane, Oredo, Benin City</td>
-                                <td class="border border-[#d0d0d0] p-1">[EMAIL_ADDRESS]</td>
-                                <td class="border border-[#d0d0d0] p-1">08031234567</td>
-                                <td class="border border-[#d0d0d0] p-1">Student</td>
-                                <td class="border border-[#d0d0d0] p-1">Promise123</td>
-                                <td class="border border-[#d0d0d0] p-1">Promise123</td>
+                                <td class="border border-[#d0d0d0] p-1">P005</td>
+                                <td class="border border-[#d0d0d0] p-1">Cookies</td>
+                                <td class="border border-[#d0d0d0] p-1">Cookies</td>
+                                <td class="border border-[#d0d0d0] p-1">0.60</td>
+                                <td class="border border-[#d0d0d0] p-1">200</td>
+                                <td class="border border-[#d0d0d0] p-1">Proton Bakeries</td>
+                                <td class="border border-[#d0d0d0] p-1">12/01/2026</td>
+                                <td class="border border-[#d0d0d0] p-1">12/01/2026</td>
+                                <td class="border border-[#d0d0d0] p-1">#cake #protonbakery #1kg</td>
+                                <td class="border border-[#d0d0d0] p-1">Available</td>
                                 <td class="border border-[#d0d0d0] p-1"><a href="#" class="bg-[#f73100] text-white w-20 h-7 rounded-lg shadow-md cursor-pointer flex flex-row justify-center items-center transition duration-300 hover:scale-105">Edit</a></td>
                             </tr>
                         </tbody>
@@ -238,71 +269,49 @@
 
                 </div>
                 <div class="flex flex-col ">
-                    <label for="">ID</label>
+                    <label for="">Product ID</label>
                     <input type="text" name="" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100">
                 </div>
 
                 <div class="flex flex-col ">
-                    <label for="">First Name</label>
+                    <label for="">Product Name</label>
                     <input type="text" name="" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100">
                 </div>
 
                 <div class="flex flex-col ">
-                    <label for="">Last Name</label>
+                    <label for="">Category</label>
                     <input type="text" name="" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100">
                 </div>
 
                 <div class="flex flex-col ">
-                    <label for="">Gender</label>
+                    <label for="">Price</label>
                     <input type="text" name="" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100">
                 </div>
 
                 <div class="flex flex-col ">
-                    <label for="">Date of Birth</label>
+                    <label for="">Stock Quantity</label>
+                    <input type="number" name="" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100">
+                </div>
+
+                <div class="flex flex-col ">
+                    <label for="">Supplier</label>
+                    <input type="text" name="" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100">
+                </div>
+
+                <div class="flex flex-col ">
+                    <label for="">Expiration Date</label>
                     <input type="date" name="" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100">
                 </div>
 
                 <div class="flex flex-col ">
-                    <label for="">Address</label>
+                    <label for="">Date Added</label>
                     <input type="text" name="" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100">
                 </div>
 
                 <div class="flex flex-col ">
-                    <label for="">Email Address</label>
+                    <label for="">Search tags</label>
                     <input type="text" name="" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100">
                 </div>
-
-                <div class="flex flex-col ">
-                    <label for="">Phone Number</label>
-                    <input type="text" name="" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100">
-                </div>
-
-                <div class="flex flex-col ">
-                    <label for="">Role</label>
-                    <select name="" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100">
-                        <option value="">Till Operator</option>
-                        <option value="">Manager</option>
-                        <option value="">Administrator</option>
-                        <option value="">Data capturer</option>
-
-                    </select>
-                </div>
-
-                <div class="flex flex-col ">
-                    <label for="">Username</label>
-                    <input type="text" name="" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100">
-                </div>
-
-                <div class="flex flex-col ">
-                    <label for="">Password</label>
-                    <input type="text" name="" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100">
-                </div>
-
-                <div class="flex flex-col ">
-                    <label for="">Confirm Password</label>
-                    <input type="text" name="" id="" class="p-1 border border-orange-400 rounded-lg bg-gray-100">
-                </div>
-
 
                 <div class="flex flex-row gap-3">
                     <a href="#" class="bg-[#f77f00] text-white w-24 h-9 rounded-lg shadow-md cursor-pointer flex flex-row justify-center items-center transition duration-300 hover:scale-105 text-xs sm:text-sm md:text-sm lg:text-md xl:text-md">Insert</a>
