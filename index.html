@@ -52,7 +52,7 @@
             </form>
         </div>
 
-        <div class="w-1/4 h-72 px-3 py-3 bg-white/65 fixed  border border-[#f77f00] rounded-lg shadow-lg shadow-[#3a3939] hidden " id="successful-login-popup">
+        <div class="lg:w-1/4  h-72 px-3 py-3 bg-white/65 fixed  border border-[#f77f00] rounded-lg shadow-lg shadow-[#3a3939] hidden " id="successful-login-popup">
 
             <div class="flex flex-row justify-center items-center">
                 <!-- <i class="fas fa-circle-check text-[100px] fixed translate-y-[-35px]  text-center text-[#f77f00]"></i> -->
@@ -61,13 +61,13 @@
             <h1 class="text-3xl font-bold text-center mt-6">Welcome Promise!</h1>
                 <i class="fas fa-circle-check text-[50px] text-center text-[#f77f00] flex flex-row justify-center w-full pt-1"></i>
 
-            <p class="text-center text-gray-600 flex flex-row justify-center items-center w-4/5 m-auto py-6">Hie login was successful, welcome to our application and enjoy.</p>
+            <p class="text-center text-gray-600 flex flex-row justify-center items-center w-4/5 m-auto py-6">Hie login was successful, welcome to our application </p>
 
             <a href="user_management.html" class=" w-4/5 self-center m-auto flex flex-col  items-center justify-center shadow-lg hover:scale-105 p-1 rounded-lg h-10 text-md font-bold bg-black text-white transition duration-300   ">Ok</a>
         </div>
 
 
-                <div class="w-1/4 h-72 px-3 py-3 bg-white/65 fixed  border border-[#f77f00] rounded-lg shadow-lg shadow-[#3a3939] hidden " id="failed-login-popup">
+        <div class="lg:w-1/4  h-72 px-3 py-3 bg-white/65 fixed  border border-[#f77f00] rounded-lg shadow-lg shadow-[#3a3939] hidden " id="failed-login-popup">
 
             <div class="flex flex-row justify-center items-center">
                 <!-- <i class="fas fa-circle-check text-[100px] fixed translate-y-[-35px]  text-center text-[#f77f00]"></i> -->
@@ -90,7 +90,7 @@
     var loginBtn;
 
     loginBtn = document.getElementById("login-btn");
-    loginBtn.addEventListener("click", showFailPopup)
+    loginBtn.addEventListener("click", showSuccessPopup)
 
     function showSuccessPopup() {
         popupContainer = document.getElementById("popup-container");
