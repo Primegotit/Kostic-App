@@ -21,7 +21,7 @@
 
 
    <main class="flex flex-col justify-center items-center h-[calc(100vh-4rem)]">
-        <div id="popup-container" class="w-full h-full bg-black opacity-10 hidden"></div>
+        <div id="popup-container" class="w-full h-full bg-[#f77f00]/30 backdrop-blur-sm hidden"></div>
 
 
         <div class="w-11/12 md:w-7/12 lg:w-5/12  h-6/7 bg-[#f77f00] p-6 rounded-lg flex flex-col items-center gap-2 shadow-lg " id="login-container">
@@ -48,11 +48,11 @@
                 
                 </div>
                 
-                <a type="submit" href="#" class="w-11/12 mt-2 flex flex-col self-center items-center justify-center shadow-lg hover:scale-105 p-1 rounded-lg h-10 text-md font-bold bg-black text-white transition duration-300 " onclick="showPopup()">Login</a>
+                <a type="submit" id="login-btn" href="#" class="w-11/12 mt-2 flex flex-col self-center items-center justify-center shadow-lg hover:scale-105 p-1 rounded-lg h-10 text-md font-bold bg-black text-white transition duration-300 " >Login</a>
             </form>
         </div>
 
-        <div class="w-1/4 h-72 px-3 py-3 bg-white fixed  border border-[#f77f00] rounded-lg shadow-lg shadow-[#3a3939] hidden " id="popup">
+        <div class="w-1/4 h-72 px-3 py-3 bg-white/65 fixed  border border-[#f77f00] rounded-lg shadow-lg shadow-[#3a3939] hidden " id="successful-login-popup">
 
             <div class="flex flex-row justify-center items-center">
                 <!-- <i class="fas fa-circle-check text-[100px] fixed translate-y-[-35px]  text-center text-[#f77f00]"></i> -->
@@ -65,6 +65,21 @@
 
             <a href="user_management.html" class=" w-4/5 self-center m-auto flex flex-col  items-center justify-center shadow-lg hover:scale-105 p-1 rounded-lg h-10 text-md font-bold bg-black text-white transition duration-300   ">Ok</a>
         </div>
+
+
+                <div class="w-1/4 h-72 px-3 py-3 bg-white/65 fixed  border border-[#f77f00] rounded-lg shadow-lg shadow-[#3a3939] hidden " id="failed-login-popup">
+
+            <div class="flex flex-row justify-center items-center">
+                <!-- <i class="fas fa-circle-check text-[100px] fixed translate-y-[-35px]  text-center text-[#f77f00]"></i> -->
+                <img src="images/logo1.png" alt="" class="h-24  fixed translate-y-[-35px]  ">
+            </div>
+            <h1 class="text-3xl font-bold text-center mt-6">Login failed!</h1>
+                <i class="fas fa-circle-xmark text-[50px] text-center text-[#f70000] flex flex-row justify-center w-full pt-1"></i>
+
+            <p class="text-center text-gray-600 flex flex-row justify-center items-center w-4/5 m-auto py-6">Sorry Login failed, please try again or exit the application.</p>
+
+            <a href="index.html" class=" w-4/5 self-center m-auto flex flex-col  items-center justify-center shadow-lg hover:scale-105 p-1 rounded-lg h-10 text-md font-bold bg-black text-white transition duration-300   ">Try again</a>
+        </div>
    </main>
 
    <script>
@@ -72,10 +87,29 @@
     var popupContainer;
     var loginContainer;
     var popup;
-    function showPopup() {
+    var loginBtn;
+
+    loginBtn = document.getElementById("login-btn");
+    loginBtn.addEventListener("click", showFailPopup)
+
+    function showSuccessPopup() {
         popupContainer = document.getElementById("popup-container");
         loginContainer = document.getElementById("login-container");
-        popup = document.getElementById("popup");
+        popup = document.getElementById("successful-login-popup");
+
+        popupContainer.classList.add("visible")
+        popupContainer.classList.remove("hidden");
+
+        loginContainer.classList.add("hidden");
+
+        popup.classList.add("visible");
+        popup.classList.remove("hidden");
+    }
+
+    function showFailPopup() {
+        popupContainer = document.getElementById("popup-container");
+        loginContainer = document.getElementById("login-container");
+        popup = document.getElementById("failed-login-popup");
 
         popupContainer.classList.add("visible")
         popupContainer.classList.remove("hidden");
