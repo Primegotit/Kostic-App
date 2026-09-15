@@ -20,13 +20,38 @@
         <div class="flex flex-row gap-2 items-center justify-end">
             <p class="text-white font-bold">Promise</p>
             <div class="">
-                <img src="images/whatsapp2.png" alt="" class="h-12 w-12 rounded-full bg-gray-700 border-2 border-gray-200">
+                <a href="" id="profile-view"> <img src="images/whatsapp2.png" alt="" class="h-12 w-12 rounded-full bg-gray-700 border-2 border-gray-200 transition duration-300 hover:scale-105 " ></a>
+                
             </div>
-            <!-- <a href="online_purchase.html"><i class="fa-solid fa-bars text-2xl text-white cursor-pointer transition-all duration-300  hover:text-gray-900"></i></a> -->
         </div>
-        
+
     </header>
 
+    <div id="profile-card" class="w-3/12 h-48 bg-gray-100 shadow-lg shadow-[#000000] rounded-md p-3 fixed right-3 border-2  border-[#f77f00] hidden ">
+        <div class="flex flex-row justify-between items-center">
+            <h1 class="text-xl text-[#f77f00] font-bold">Promise Siafwiyo</h1>
+
+            <a href="#" class=" cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105  sm:text-sm md:text-md lg:text-md xl:text-md" ><i class="fas fa-circle-xmark text-2xl text-[#f70000] flex flex-row justify-center w-full "></i></a>
+
+        </div>
+
+        <div class=" flex flex-row  h-4/5">
+            <div class=" w-2/6 ">
+                <img src="images/whatsapp2.png" alt="" class=" w-[85%] shadow-lg border-2  border-[#f77f00] rounded-full bg-gray-700   transition duration-300 hover:scale-105 " >
+
+            </div>
+
+            <div class="w-4/6 p-2 text-sm border  border-[#f77f00] rounded-md">
+                <p>Joined on : 22 February 20</p>
+                <p>Total transactions : 8</p>
+                <p>Points : 300</p>
+                <p>Location : Bulawayo</p>
+                <p>Email : primevaldigitals@gmail.com</p>
+            </div>
+
+        </div>
+    </div>
+        
     <main class="  h-[calc(100vh-4rem)] ">
 
         <div class=" text-sm overflow-auto  flex flex-col gap-4  shadow-[inset_0_2px_8px_rgba(0,0,0,0.2)] bg-gray-200 p-3 ">
@@ -936,8 +961,15 @@
     </main>
     
     <script>
+        let profileView = document.getElementById("profile-view")
+        let profileCard = document.getElementById("profile-card")
 
-        
+        profileView.addEventListener("click", viewProfileCard)
+
+        function viewProfileCard(){
+            profileCard.classList.remove("hidden")
+            profileCard.classList.add("visible")
+        }
     </script>
 </body>
 </html>
