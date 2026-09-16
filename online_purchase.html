@@ -18,37 +18,86 @@
             </div>
 
         <div class="flex flex-row gap-2 items-center justify-end">
-            <p class="text-white font-bold">Promise</p>
-            <div class="">
-                <a href="" id="profile-view"> <img src="images/whatsapp2.png" alt="" class="h-12 w-12 rounded-full bg-gray-700 border-2 border-gray-200 transition duration-300 hover:scale-105 " ></a>
-                
+            <p class="text-white font-bold hidden sm:block">Promise</p>
+            <div>
+                <button type="button" id="profile-view" class="relative block focus:outline-none rounded-full cursor-pointer transition duration-300 hover:scale-105 active:scale-95 focus:ring-2 focus:ring-white/80" aria-label="Toggle profile menu" aria-expanded="false">
+                    <img src="images/whatsapp2.png" alt="Profile" class="h-11 w-11 rounded-full object-cover bg-gray-700 border-2 border-white shadow-sm">
+                    <span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full"></span>
+                </button>
             </div>
         </div>
 
     </header>
 
-    <div id="profile-card" class="w-3/12 h-48 bg-gray-100 shadow-lg shadow-[#000000] rounded-md p-3 fixed right-3 border-2  border-[#f77f00] hidden ">
-        <div class="flex flex-row justify-between items-center">
-            <h1 class="text-xl text-[#f77f00] font-bold">Promise Siafwiyo</h1>
-
-            <a href="#" class=" cursor-pointer flex flex-row justify-center gap-2 items-center transition duration-300 hover:scale-105  sm:text-sm md:text-md lg:text-md xl:text-md" ><i class="fas fa-circle-xmark text-2xl text-[#f70000] flex flex-row justify-center w-full "></i></a>
-
+    <!-- Profile Popup Card -->
+    <div id="profile-card" class="hidden fixed top-16 sm:top-18 right-3 sm:right-6 z-50 w-[340px] max-w-[calc(100vw-1.5rem)] bg-white rounded-2xl shadow-2xl shadow-black/25 border border-orange-200/80 overflow-hidden transition-all duration-200 ease-out">
+        <!-- Card Header with Gradient -->
+        <div class="bg-gradient-to-r from-[#f77f00] to-[#ff9e3b] p-4 text-white relative">
+            <button type="button" id="close-profile-card" class="absolute top-3 right-3 text-white/80 hover:text-white hover:bg-white/20 rounded-full w-7 h-7 flex items-center justify-center transition-all cursor-pointer" aria-label="Close profile">
+                <i class="fa-solid fa-xmark text-base"></i>
+            </button>
+            
+            <div class="flex items-center gap-3">
+                <div class="relative shrink-0">
+                    <img src="images/whatsapp2.png" alt="Promise Siafwiyo" class="w-14 h-14 rounded-full border-2 border-white object-cover shadow-md bg-gray-700">
+                    <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-500 border-2 border-white rounded-full" title="Online"></span>
+                </div>
+                <div class="min-w-0 pr-4">
+                    <div class="flex items-center gap-1.5">
+                        <h2 class="text-base font-bold truncate text-white leading-tight">Promise Siafwiyo</h2>
+                        <i class="fa-solid fa-circle-check text-xs text-white" title="Verified Account"></i>
+                    </div>
+                    <p class="text-xs text-orange-100 truncate mt-0.5">primevaldigitals@gmail.com</p>
+                    <span class="inline-flex items-center gap-1 mt-1.5 px-2 py-0.5 bg-white/20 backdrop-blur-sm text-white text-[11px] font-medium rounded-full">
+                        <i class="fa-solid fa-shield-halved text-[10px]"></i> Verified Member
+                    </span>
+                </div>
+            </div>
         </div>
 
-        <div class=" flex flex-row  h-4/5">
-            <div class=" w-2/6 ">
-                <img src="images/whatsapp2.png" alt="" class=" w-[85%] shadow-lg border-2  border-[#f77f00] rounded-full bg-gray-700   transition duration-300 hover:scale-105 " >
-
+        <!-- Card Body Details -->
+        <div class="p-3.5 bg-gray-50/60 space-y-2 text-xs">
+            <!-- Joined Date -->
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-white border border-gray-100 shadow-sm">
+                <span class="flex items-center gap-2 text-gray-500 font-medium">
+                    <i class="fa-regular fa-calendar-check text-[#f77f00] text-sm w-4 text-center"></i> Joined on
+                </span>
+                <span class="font-semibold text-gray-800">22 February 2024</span>
             </div>
 
-            <div class="w-4/6 p-2 text-sm border  border-[#f77f00] rounded-md">
-                <p>Joined on : 22 February 20</p>
-                <p>Total transactions : 8</p>
-                <p>Points : 300</p>
-                <p>Location : Bulawayo</p>
-                <p>Email : primevaldigitals@gmail.com</p>
+            <!-- Stats Grid: Transactions & Points -->
+            <div class="grid grid-cols-2 gap-2">
+                <div class="p-2.5 rounded-xl bg-white border border-gray-100 shadow-sm">
+                    <span class="flex items-center gap-1.5 text-gray-500 text-[11px] font-medium">
+                        <i class="fa-solid fa-cart-shopping text-[#f77f00]"></i> Transactions
+                    </span>
+                    <p class="text-base font-bold text-gray-800 mt-1">8 completed</p>
+                </div>
+                <div class="p-2.5 rounded-xl bg-white border border-gray-100 shadow-sm">
+                    <span class="flex items-center gap-1.5 text-gray-500 text-[11px] font-medium">
+                        <i class="fa-solid fa-star text-amber-500"></i> Reward Points
+                    </span>
+                    <p class="text-base font-bold text-[#f77f00] mt-1">300 pts</p>
+                </div>
             </div>
 
+            <!-- Location -->
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-white border border-gray-100 shadow-sm">
+                <span class="flex items-center gap-2 text-gray-500 font-medium">
+                    <i class="fa-solid fa-location-dot text-[#f77f00] text-sm w-4 text-center"></i> Location
+                </span>
+                <span class="font-semibold text-gray-800">Bulawayo, Zimbabwe</span>
+            </div>
+        </div>
+
+        <!-- Card Footer Actions -->
+        <div class="p-3 bg-white border-t border-gray-100 flex items-center justify-between gap-2">
+            <a href="user_management.html" class="flex-1 text-center py-2 px-3 text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-xl transition duration-200 flex items-center justify-center gap-1.5 cursor-pointer">
+                <i class="fa-solid fa-user-pen text-gray-500"></i> Edit Profile
+            </a>
+            <a href="index.html" class="flex-1 text-center py-2 px-3 text-xs font-semibold text-white bg-[#f77f00] hover:bg-[#d96e00] active:scale-95 rounded-xl transition duration-200 shadow-sm flex items-center justify-center gap-1.5 cursor-pointer">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
+            </a>
         </div>
     </div>
         
@@ -961,15 +1010,70 @@
     </main>
     
     <script>
-        let profileView = document.getElementById("profile-view")
-        let profileCard = document.getElementById("profile-card")
+        const profileView = document.getElementById("profile-view");
+        const profileCard = document.getElementById("profile-card");
+        const closeProfileCardBtn = document.getElementById("close-profile-card");
 
-        profileView.addEventListener("click", viewProfileCard)
-
-        function viewProfileCard(){
-            profileCard.classList.remove("hidden")
-            profileCard.classList.add("visible")
+        function openProfileCard() {
+            profileCard.classList.remove("hidden");
+            if (profileView) {
+                profileView.setAttribute("aria-expanded", "true");
+            }
         }
+
+        function closeProfileCard() {
+            profileCard.classList.add("hidden");
+            if (profileView) {
+                profileView.setAttribute("aria-expanded", "false");
+            }
+        }
+
+        function toggleProfileCard(e) {
+            if (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            if (profileCard.classList.contains("hidden")) {
+                openProfileCard();
+            } else {
+                closeProfileCard();
+            }
+        }
+
+        if (profileView) {
+            profileView.addEventListener("click", toggleProfileCard);
+        }
+
+        if (closeProfileCardBtn) {
+            closeProfileCardBtn.addEventListener("click", function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                closeProfileCard();
+            });
+        }
+
+        // Prevent clicks inside the profile card from bubbling up and closing it
+        if (profileCard) {
+            profileCard.addEventListener("click", function(e) {
+                e.stopPropagation();
+            });
+        }
+
+        // Close popup when clicking anywhere outside
+        document.addEventListener("click", function(e) {
+            if (profileCard && !profileCard.classList.contains("hidden")) {
+                if (!profileCard.contains(e.target) && !profileView.contains(e.target)) {
+                    closeProfileCard();
+                }
+            }
+        });
+
+        // Close popup when pressing Escape key
+        document.addEventListener("keydown", function(e) {
+            if (e.key === "Escape" && profileCard && !profileCard.classList.contains("hidden")) {
+                closeProfileCard();
+            }
+        });
     </script>
 </body>
 </html>
