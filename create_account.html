@@ -20,168 +20,174 @@
    </header>
 
 
-   <main class="flex flex-col justify-center items-center h-[calc(100vh-4rem)]">
-        <div id="popup-container" class="w-full h-full bg-[#f77f00]/30 backdrop-blur-sm hidden"></div>
+   <main class="min-h-[calc(100vh-4rem)] flex flex-col justify-center items-center py-8 px-4">
+        <!-- Backdrop Overlay -->
+        <div id="popup-container" class="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm hidden"></div>
 
-
-        <div class="w-11/12 md:w-7/12 lg:w-5/12  h-6/7 bg-[#f77f00] p-6 rounded-lg flex flex-col items-center gap-2 shadow-lg " id="login-container">
-            <h3 class="text-white  font-bold  ">Create a new account</h3>
-            <form action="" class="w-full flex flex-col gap-6 h-full  p-2 justify-start ">
-
-                <div class="flex flex-col justfiy-center items-center ">
-                    <img src="images/logo15.png" alt="" class="h-14 ">
+        <!-- Form Card Container -->
+        <div class="w-full max-w-xl bg-[#f77f00] p-6 sm:p-8 rounded-2xl flex flex-col items-center shadow-2xl border border-orange-400/40 my-auto" id="login-container">
+            <h2 class="text-white text-xl sm:text-2xl font-bold text-center mb-1">Create a new account</h2>
+            <p class="text-orange-100 text-xs text-center mb-4">Fill in your details below to get started</p>
+            
+            <form action="" class="w-full flex flex-col gap-4">
+                <div class="flex flex-col justify-center items-center mb-1">
+                    <img src="images/logo15.png" alt="KOSTIC" class="h-12 w-auto object-contain">
                 </div>
 
-                <div class="flex flex-col gap-6 self-center w-11/12">
-
-
-                    <div class=" flex flex-row gap-4 flex-wrap justify-between">
-
-                        <div class="flex flex-col gap-1 w-full lg:w-[32%]">
-                            <label for="" class="text-white font-bold">First Name</label>
-                            <input type="text" placeholder="Enter your first name" class="p-1 rounded-lg">
+                <div class="flex flex-col gap-3.5 w-full">
+                    <!-- Names Row -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <div class="flex flex-col gap-1">
+                            <label class="text-white font-semibold text-xs">First Name</label>
+                            <input type="text" placeholder="First name" class="p-2 rounded-lg bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-black">
                         </div>
 
-                        <div class="flex flex-col gap-1 w-full lg:w-[27%]">
-                            <label for="" class="text-white font-bold">Middle Name</label>
-                            <input type="text" placeholder="(Optional)" class="p-1 rounded-lg">
+                        <div class="flex flex-col gap-1">
+                            <label class="text-white font-semibold text-xs">Middle Name</label>
+                            <input type="text" placeholder="(Optional)" class="p-2 rounded-lg bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-black">
                         </div>
 
-                        <div class="flex flex-col gap-1 w-full lg:w-[32%]">
-                            <label for="" class="text-white font-bold">Last Name</label>
-                            <input type="text" placeholder="Enter your last name" class="p-1 rounded-lg">
+                        <div class="flex flex-col gap-1">
+                            <label class="text-white font-semibold text-xs">Last Name</label>
+                            <input type="text" placeholder="Last name" class="p-2 rounded-lg bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-black">
                         </div>
-                        
                     </div>
 
-                    <div class="flex flex-col gap-1">
-                        <label for="" class="text-white font-bold">Gender</label>
-                        <select name="" id="" class="p-1 rounded-lg" placeholder="Select your gender">
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-
-                        </select>
-                    </div>
-
-                    <div class="flex flex-col gap-1">
-                        <label for="" class="text-white font-bold">Date of Birth</label>
-                        <input type="date" placeholder="Enter your " class="p-1 rounded-lg">
-                    </div>
-
-                    <div class="flex flex-col gap-1">
-                        <label for="" class="text-white font-bold">Phone Number</label>
-                        <input type="tel" placeholder="Enter your phone number" class="p-1 rounded-lg">
-                    </div>
-
-                    <div class="flex flex-row gap-4 ">
-                        <div class="flex flex-col gap-1 w-1/2">
-                            <label for="" class="text-white font-bold">City/Town</label>
-                            <select name="" id="" class="p-1 rounded-lg" placeholder="Select your gender">
-                                <option value="Bulawayo">Bulawayo</option>
-                                <option value="Harare">Harare</option>
-                                <option value="Harare">Kwekwe</option>
-                                <option value="Harare">Kadoma</option>
-                                <option value="Harare">Lupane</option>
-                                <option value="Harare">Gwanda</option>
-                                <option value="Harare">Victoria Falls</option>
-
-
+                    <!-- Gender & Date of Birth Row -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="flex flex-col gap-1">
+                            <label class="text-white font-semibold text-xs">Gender</label>
+                            <select class="p-2 rounded-lg bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-black">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
                             </select>
                         </div>
 
+                        <div class="flex flex-col gap-1">
+                            <label class="text-white font-semibold text-xs">Date of Birth</label>
+                            <input type="date" class="p-2 rounded-lg bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-black">
+                        </div>
+                    </div>
 
-                        <div class="flex flex-col gap-1 w-1/2">
-                            <label for="" class="text-white font-bold">Address</label>
-                            <input type="text" placeholder="Enter your address" class="p-1 rounded-lg">
+                    <!-- Phone Number & Email Row -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="flex flex-col gap-1">
+                            <label class="text-white font-semibold text-xs">Phone Number</label>
+                            <input type="tel" placeholder="Enter phone number" class="p-2 rounded-lg bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-black">
                         </div>
 
+                        <div class="flex flex-col gap-1">
+                            <label class="text-white font-semibold text-xs">Email Address</label>
+                            <input type="email" placeholder="Enter email address" class="p-2 rounded-lg bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-black">
+                        </div>
                     </div>
 
+                    <!-- City/Town & Address Row -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="flex flex-col gap-1">
+                            <label class="text-white font-semibold text-xs">City/Town</label>
+                            <select class="p-2 rounded-lg bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-black">
+                                <option value="Bulawayo">Bulawayo</option>
+                                <option value="Harare">Harare</option>
+                                <option value="Kwekwe">Kwekwe</option>
+                                <option value="Kadoma">Kadoma</option>
+                                <option value="Lupane">Lupane</option>
+                                <option value="Gwanda">Gwanda</option>
+                                <option value="Victoria Falls">Victoria Falls</option>
+                            </select>
+                        </div>
 
-                    <div class="flex flex-col gap-1">
-                        <label for="" class="text-white font-bold">Email</label>
-                        <input type="email" placeholder="Enter your email address" class="p-1 rounded-lg">
+                        <div class="flex flex-col gap-1">
+                            <label class="text-white font-semibold text-xs">Address</label>
+                            <input type="text" placeholder="Enter street address" class="p-2 rounded-lg bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-black">
+                        </div>
                     </div>
 
-
-                    <div>
-                        <a href="#" class="text-black text-md underline cursor-pointer transition duration-300 hover:text-gray-100   ">Already have an account?</a>
+                    <div class="pt-1">
+                        <a href="index.html" class="text-black text-xs sm:text-sm font-semibold underline cursor-pointer transition duration-300 hover:text-white">Already have an account? Log in</a>
                     </div>
-                
                 </div>
                 
-                <a type="submit" id="login-btn" href="#" class="w-11/12 mt-2 flex flex-col self-center items-center justify-center shadow-lg hover:scale-105 p-1 rounded-lg h-10 text-md font-bold bg-black text-white transition duration-300 " >Create account</a>
+                <button type="button" id="login-btn" class="w-full mt-2 flex items-center justify-center shadow-lg hover:scale-[1.02] active:scale-95 py-2.5 px-4 rounded-lg text-sm font-bold bg-black hover:bg-neutral-900 text-white transition duration-200 cursor-pointer">
+                    Create account
+                </button>
             </form>
         </div>
 
-        <div class="w-1/4 h-72 px-3 py-3 bg-white/65 fixed  border border-[#f77f00] rounded-lg shadow-lg shadow-[#3a3939] hidden " id="successful-login-popup">
-
-            <div class="flex flex-row justify-center items-center">
-                <!-- <i class="fas fa-circle-check text-[100px] fixed translate-y-[-35px]  text-center text-[#f77f00]"></i> -->
-                <img src="images/logo1.png" alt="" class="h-24  fixed translate-y-[-35px]  ">
+        <!-- Success Modal Popup -->
+        <div class="hidden fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-11/12 sm:w-96 max-w-sm bg-white border-2 border-[#f77f00] rounded-2xl shadow-2xl p-6 text-center" id="successful-login-popup">
+            <div class="flex justify-center -mt-12 mb-3">
+                <div class="w-20 h-20 bg-white rounded-full border-2 border-[#f77f00] shadow-md flex items-center justify-center p-2">
+                    <img src="images/logo15.png" alt="KOSTIC" class="h-10 w-auto object-contain">
+                </div>
             </div>
-            <h1 class="text-3xl font-bold text-center mt-6">Welcome Promise!</h1>
-                <i class="fas fa-circle-check text-[50px] text-center text-[#f77f00] flex flex-row justify-center w-full pt-1"></i>
-
-            <p class="text-center text-gray-600 flex flex-row justify-center items-center w-4/5 m-auto py-6">Hie login was successful, welcome to our application and enjoy.</p>
-
-            <a href="user_management.html" class=" w-4/5 self-center m-auto flex flex-col  items-center justify-center shadow-lg hover:scale-105 p-1 rounded-lg h-10 text-md font-bold bg-black text-white transition duration-300   ">Ok</a>
+            <div class="flex justify-center mb-2">
+                <i class="fas fa-circle-check text-4xl text-emerald-500"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Welcome Promise!</h3>
+            <p class="text-gray-600 text-xs sm:text-sm mt-2 mb-6">Your account was created successfully. Welcome to our application and enjoy!</p>
+            <a href="user_management.html" class="block w-full py-2.5 px-4 bg-black hover:bg-neutral-800 text-white rounded-lg text-sm font-bold shadow hover:scale-[1.02] active:scale-95 transition-all text-center">Ok</a>
         </div>
 
-
-                <div class="w-1/4 h-72 px-3 py-3 bg-white/65 fixed  border border-[#f77f00] rounded-lg shadow-lg shadow-[#3a3939] hidden " id="failed-login-popup">
-
-            <div class="flex flex-row justify-center items-center">
-                <!-- <i class="fas fa-circle-check text-[100px] fixed translate-y-[-35px]  text-center text-[#f77f00]"></i> -->
-                <img src="images/logo1.png" alt="" class="h-24  fixed translate-y-[-35px]  ">
+        <!-- Failed Modal Popup -->
+        <div class="hidden fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-11/12 sm:w-96 max-w-sm bg-white border-2 border-red-500 rounded-2xl shadow-2xl p-6 text-center" id="failed-login-popup">
+            <div class="flex justify-center -mt-12 mb-3">
+                <div class="w-20 h-20 bg-white rounded-full border-2 border-red-500 shadow-md flex items-center justify-center p-2">
+                    <img src="images/logo15.png" alt="KOSTIC" class="h-10 w-auto object-contain">
+                </div>
             </div>
-            <h1 class="text-3xl font-bold text-center mt-6">Login failed!</h1>
-                <i class="fas fa-circle-xmark text-[50px] text-center text-[#f70000] flex flex-row justify-center w-full pt-1"></i>
-
-            <p class="text-center text-gray-600 flex flex-row justify-center items-center w-4/5 m-auto py-6">Sorry Login failed, please try again or exit the application.</p>
-
-            <a href="index.html" class=" w-4/5 self-center m-auto flex flex-col  items-center justify-center shadow-lg hover:scale-105 p-1 rounded-lg h-10 text-md font-bold bg-black text-white transition duration-300   ">Try again</a>
+            <div class="flex justify-center mb-2">
+                <i class="fas fa-circle-xmark text-4xl text-[#f70000]"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Registration Failed!</h3>
+            <p class="text-gray-600 text-xs sm:text-sm mt-2 mb-6">Sorry, registration failed. Please check your details and try again.</p>
+            <button type="button" id="try-again-btn" class="block w-full py-2.5 px-4 bg-black hover:bg-neutral-800 text-white rounded-lg text-sm font-bold shadow hover:scale-[1.02] active:scale-95 transition-all text-center cursor-pointer">Try again</button>
         </div>
    </main>
 
    <script>
-    var popup = document.getElementById("popup")
-    var popupContainer;
-    var loginContainer;
-    var popup;
-    var loginBtn;
-
-    loginBtn = document.getElementById("login-btn");
-    loginBtn.addEventListener("click", showFailPopup)
+    const popupContainer = document.getElementById("popup-container");
+    const loginContainer = document.getElementById("login-container");
+    const successPopup = document.getElementById("successful-login-popup");
+    const failPopup = document.getElementById("failed-login-popup");
+    const loginBtn = document.getElementById("login-btn");
+    const tryAgainBtn = document.getElementById("try-again-btn");
 
     function showSuccessPopup() {
-        popupContainer = document.getElementById("popup-container");
-        loginContainer = document.getElementById("login-container");
-        popup = document.getElementById("successful-login-popup");
-
-        popupContainer.classList.add("visible")
         popupContainer.classList.remove("hidden");
-
-        loginContainer.classList.add("hidden");
-
-        popup.classList.add("visible");
-        popup.classList.remove("hidden");
+        successPopup.classList.remove("hidden");
+        failPopup.classList.add("hidden");
     }
 
     function showFailPopup() {
-        popupContainer = document.getElementById("popup-container");
-        loginContainer = document.getElementById("login-container");
-        popup = document.getElementById("failed-login-popup");
-
-        popupContainer.classList.add("visible")
         popupContainer.classList.remove("hidden");
-
-        loginContainer.classList.add("hidden");
-
-        popup.classList.add("visible");
-        popup.classList.remove("hidden");
+        failPopup.classList.remove("hidden");
+        successPopup.classList.add("hidden");
     }
 
+    function closeAllPopups() {
+        popupContainer.classList.add("hidden");
+        successPopup.classList.add("hidden");
+        failPopup.classList.add("hidden");
+    }
+
+    if (loginBtn) {
+        loginBtn.addEventListener("click", function(e) {
+            e.preventDefault();
+            showFailPopup();
+        });
+    }
+
+    if (tryAgainBtn) {
+        tryAgainBtn.addEventListener("click", function(e) {
+            e.preventDefault();
+            closeAllPopups();
+        });
+    }
+
+    if (popupContainer) {
+        popupContainer.addEventListener("click", closeAllPopups);
+    }
    </script>
 </body>
 </html>
